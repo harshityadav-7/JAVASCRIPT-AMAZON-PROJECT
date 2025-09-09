@@ -1,5 +1,5 @@
 const products = [{
-  image:'images/products/athletic-cotton-socks-6-PerformanceObserverEntryList.jpg',
+  image:'images/products/athletic-cotton-socks-6-pairs.jpg',
   name:'Black and Gray Athletic Cotton Socks - 6 Pairs',
   rating:{
     stars:4.5,
@@ -24,9 +24,9 @@ const products = [{
   priceCents:799
 }];
 
-
+let productHTML='';
 products.forEach((product)=>{
-  const html = `<div class="product-container">
+  productHTML += `<div class="product-container">
                   <div class="product-image-container">
                     <img class="product-image"
                       src="${product.image}">
@@ -75,3 +75,6 @@ products.forEach((product)=>{
                   </button>
                 </div>`
 });
+
+
+document.querySelector('.js-products-grid').innerHTML=productHTML;
