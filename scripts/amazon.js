@@ -83,5 +83,16 @@ document.querySelectorAll('.js-add-to-cart').forEach((button)=>{
     document.querySelector('.js-cart-quantity').innerHTML=cartQuantity;
     
     console.log(cart);
+
+    const productCard = button.closest('.product-container');
+    const addedMsg=productCard.querySelector('.added-to-cart');
+    if(addedMsg){
+      addedMsg.classList.add("show");
+    }
+    button.disabled=true;
+    setTimeout(()=>{
+      addedMsg.classList.remove("show");
+      button.disabled=false;
+    },1000);
   });
 });
