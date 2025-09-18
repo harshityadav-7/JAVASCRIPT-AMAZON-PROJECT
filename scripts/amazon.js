@@ -1,4 +1,8 @@
 import {cart} from '../data/cart.js';
+import {products} from '../data/products.js';
+
+//dot dot above are used to move out of scripts sub-folder
+//module only works when we open website using live server and not directly
 let productHTML='';
 products.forEach((product)=>{
   productHTML += `<div class="product-container">
